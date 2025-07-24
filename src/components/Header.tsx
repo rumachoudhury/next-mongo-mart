@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
-// import Menu from "./Menu";
+import Menu from "./Menu";
+
 // import { SearchBox } from "./SearchBox";
 
 const Header = () => {
@@ -27,8 +28,9 @@ const Header = () => {
           <Link href="/" className="btn btn-ghost text-lg">
             Next Mongo Mart
           </Link>
+          <Menu />
 
-          <ul className="flex">
+          {/* <ul className="flex">
             <li>
               <Link className="btn btn-ghost rounded-btn" href="/cart">
                 Cat
@@ -40,7 +42,7 @@ const Header = () => {
                 Signin
               </Link>
             </li>
-          </ul>
+          </ul> */}
         </div>
         {/* </div> */}
         {/* <div className="bg-base-300 block md:hidden text-center pb-3">
