@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import useCartService from "../../../../lib/hooks/useCartStore";
+import useCartService from "../../../lib/hooks/useCartStore";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";

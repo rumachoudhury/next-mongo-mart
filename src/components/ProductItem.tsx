@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 // import { Rating } from "./Rating";
-import { Product } from "../../lib/models/ProductModel";
+import { Product } from "../lib/models/ProductModel";
 
 export default function ProductItem({ product }: { product: Product }) {
   return (
