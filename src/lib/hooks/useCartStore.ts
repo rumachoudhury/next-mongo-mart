@@ -45,6 +45,7 @@ export default function useCartService() {
     paymentMethod,
     // shippingAddress,
   } = cartStore();
+
   return {
     items,
     itemsPrice,

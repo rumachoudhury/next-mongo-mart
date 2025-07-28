@@ -1,11 +1,12 @@
 "use client";
 
+import { signOut, useSession } from "next-auth/react";
 import useCartService from "../lib/hooks/useCartStore";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 function Menu() {
-  const { items } = useCartService(); // Get the items from the cart service
+  const { items, init } = useCartService(); // Get the items from the cart service
 
   //
   const [mounted, setMounted] = useState(false);
@@ -13,6 +14,12 @@ function Menu() {
     //
     setMounted(true);
   }, []);
+
+  const signOutHandler = () => {
+    signOut({ callbackUrl: "/signin" });
+    init(); // Reinitialize the cart service after sign out
+  };
+  const { data: session } = useSession();
   return (
     <div>
       <ul className="flex items-stretch">
@@ -27,9 +34,18 @@ function Menu() {
           </Link>
         </li>
 
-        <li>
+        {/* <li>
           <button className="btn btn-ghost rounded-btn" type="button">
             Signin
+          </button>
+        </li> */}
+        <li>
+          <button
+            className="btn btn-ghost rounded-btn"
+            type="button"
+            onClick={signOutHandler}
+          >
+            Sign out
           </button>
         </li>
       </ul>

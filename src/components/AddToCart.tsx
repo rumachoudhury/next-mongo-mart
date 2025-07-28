@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 export default function AddToCart({ item }: { item: OrderItem }) {
   const [existItem, setExistItem] = useState<OrderItem | undefined>(undefined);
   const router = useRouter();
-  const { items, increase, decrease } = useCartService<OrderItem | undefined>();
+  const { items, increase, decrease } = useCartService();
 
   useEffect(() => {
     setExistItem(items.find((x) => x.slug === item.slug));
