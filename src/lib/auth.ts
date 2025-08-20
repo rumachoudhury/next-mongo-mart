@@ -3,8 +3,8 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import UserModel from "../lib/models/UserModel";
 import NextAuth from "next-auth";
 
-import { sign } from "crypto";
-import { register } from "module";
+// import { sign } from "crypto";
+// import { register } from "module";
 
 export const authOptions = {
   providers: [

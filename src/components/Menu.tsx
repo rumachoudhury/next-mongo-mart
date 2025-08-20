@@ -34,11 +34,6 @@ function Menu() {
           </Link>
         </li>
 
-        {/* <li>
-          <button className="btn btn-ghost rounded-btn" type="button">
-            Signin
-          </button>
-        </li> */}
         <li>
           <button
             className="btn btn-ghost rounded-btn"
